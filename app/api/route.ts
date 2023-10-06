@@ -14,6 +14,8 @@ export async function POST(req: Request) {
   try {
     let { date, time, teamA, teamB, category,winner } =
       (await req.json()) as CreateMatch;
+    
+      // console.log({time, date})
 
     let createdMatch = await prisma.match.create({
       data: {
@@ -24,6 +26,7 @@ export async function POST(req: Request) {
         winner: winner,
       },
     });
+    // console.log(createdMatch.date)
 
     return NextResponse.json({ status: 200, createdMatch });
   } catch {

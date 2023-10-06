@@ -33,6 +33,7 @@ export default function Home() {
                     <br />
                     <span className="font-bold text-xl text-blue-900">
                       {new Date(match.date).toLocaleTimeString()}
+                      {/* {`${match.date.getHours()}:${match.date.getMinutes()} ${match.date.getTime()}`} */}
                     </span>
                   </div>
                   <div className="w-full flex justify-evenly gap-3 text-white">

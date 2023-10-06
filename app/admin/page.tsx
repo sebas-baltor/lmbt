@@ -162,7 +162,6 @@ export default function Admin() {
                 id="winner"
                 type="text"
                 name="winner"
-                required
                 value={formValues.winner}
                 onChange={handleChange}
               />
@@ -201,7 +200,8 @@ export default function Admin() {
               {matches.map((match) => (
                 <tr key={`${match.id}-match`}>
                   <td>
-                    {new Date(match.date).toLocaleDateString()} a las{" "}
+                    {/* {new Date(match.date).toLocaleDateString()} a las{" "}
+                    {new Date(match.date).toLocaleTimeString()} */}
                     {new Date(match.date).toLocaleTimeString()}
                   </td>
                   <td>{match.teamA}</td>
