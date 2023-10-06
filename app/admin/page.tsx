@@ -26,6 +26,7 @@ export default function Admin() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    // console.log(new Date().getTime())
     // fetch to create a new match
     fetch(`${process.env.serverUrl}/api`, {
       method: "POST",
@@ -202,7 +203,7 @@ export default function Admin() {
                   <td>
                     {/* {new Date(match.date).toLocaleDateString()} a las{" "}
                     {new Date(match.date).toLocaleTimeString()} */}
-                    {new Date(match.date).toLocaleTimeString()}
+                    {new Date(match.date).toLocaleString("es-MX",{timeZone:"America/Mexico_City"})}
                   </td>
                   <td>{match.teamA}</td>
                   <td>{match.teamB}</td>

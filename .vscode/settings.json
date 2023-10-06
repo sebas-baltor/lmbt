@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/1787557d-a649-44e2-81dd-1bc3cb22473d/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/rol-juego",
+    "appService.defaultWebAppToDeploy": "",
     "appService.deploySubpath": "."
 }

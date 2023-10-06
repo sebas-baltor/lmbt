@@ -12,11 +12,13 @@ export async function GET(request: Request) {
 }
 export async function POST(req: Request) {
   try {
-    let { date, time, teamA, teamB, category,winner } =
+    let { date, time, teamA, teamB, category, winner } =
       (await req.json()) as CreateMatch;
-    
-      // console.log({time, date})
 
+    // console.log({time, date})
+    let datePlus6 = new Date(`${date}T${time}`).getTime();
+    let sixHours = 6 * 60;
+    let rightDate = new Date(datePlus6 - sixHours);
     let createdMatch = await prisma.match.create({
       data: {
         date: new Date(`${date}T${time}`),
