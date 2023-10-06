@@ -212,7 +212,7 @@ export default function Admin() {
                       type="button"
                       className="bg-red-300 text-white px-3 py-2 rounded-md"
                       onClick={() => {
-                        console.log(`eliminando el item ${match.id}`);
+                        // console.log(`eliminando el item ${match.id}`);
                         fetch(`${process.env.serverUrl}/api`, {
                           method: "DELETE",
                           body: JSON.stringify({ id: match.id }),
