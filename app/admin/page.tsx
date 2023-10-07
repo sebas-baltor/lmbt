@@ -201,9 +201,7 @@ export default function Admin() {
               {matches.map((match) => (
                 <tr key={`${match.id}-match`}>
                   <td>
-                    {/* {new Date(match.date).toLocaleDateString()} a las{" "}
-                    {new Date(match.date).toLocaleTimeString()} */}
-                    {new Date(match.date).toLocaleString("es-MX",{timeZone:"America/Mexico_City"})}
+                    {match.textDate}
                   </td>
                   <td>{match.teamA}</td>
                   <td>{match.teamB}</td>
