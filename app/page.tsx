@@ -1,6 +1,7 @@
 "use client";
 import { Match } from "@prisma/client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [matches, setMatches] = useState<Match[]>([]);
@@ -15,6 +16,14 @@ export default function Home() {
     <>
       <header className="bg-blue-950 text-white py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
+          <a href="https://www.facebook.com/LMBTemas" target="_blank">
+            <Image
+              src={"/lmbt-logo.svg"}
+              height={60}
+              width={60}
+              alt="Facebook"
+            />
+          </a>
           <h1 className="text-2xl font-bold">Rol de Juegos | 8 de Octubre</h1>
         </div>
       </header>
@@ -33,7 +42,6 @@ export default function Home() {
                     <br />
                     <span className="font-bold text-xl text-blue-900">
                       {match.textDate}
-                      {/* {`${match.date.getHours()}:${match.date.getMinutes()} ${match.date.getTime()}`} */}
                     </span>
                   </div>
                   <div className="w-full flex justify-evenly gap-3 text-white">
@@ -49,14 +57,13 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                {match.winner ? (
-                  <div className="text-blue-900 font-bold border-white border px-4 py-2 shadow-xl bg-white text-2xl w-1/2 text-center bg-gradient-to-r from-orange-400 to-yellow-200">
-                    {match.winner}
-                  </div>
-                ) : (
-                  <span className="text-slate-400">ganador pendiente</span>
-                )}
-
+                  {match.winner ? (
+                    <div className="text-blue-900 font-bold border-white border px-4 py-2 shadow-xl bg-white text-2xl w-1/2 text-center bg-gradient-to-r from-orange-400 to-yellow-200">
+                      {match.winner}
+                    </div>
+                  ) : (
+                    <span className="text-slate-400">ganador pendiente</span>
+                  )}
                 </div>
               </li>
             ))
@@ -67,9 +74,34 @@ export default function Home() {
       </main>
       <footer className="bg-blue-950 text-white py-4">
         <div className="container mx-auto px-4">
-          <p className="text-center">
-            &copy; Torneo de Basquetbol Patronal 2023
-          </p>
+          <div className="flex flex-col gap-3">
+            <div className="flex gap-3 items-center justify-center">
+              <a href="https://www.facebook.com/LMBTemas" target="_blank">
+                <Image
+                  src={"/lmbt-logo.svg"}
+                  height={40}
+                  width={40}
+                  alt="Facebook"
+                />
+              </a>
+              <Image
+                src={"/imcufidet-logo.jpg"}
+                height={30}
+                width={100}
+                alt="Imcufidet"
+              />
+              <Image
+                src={"/copaci-logo.jpg"}
+                height={30}
+                width={40}
+                alt="Copaci"
+              />
+            </div>
+            <p className="text-center text-slate-400">
+              &copy; Torneo de Basquetbol Patronal 2023 & Liga Municipal De
+              Basquetbol de Temascalapa | Agradecimientos a IMCUFIDET y COPACI
+            </p>
+          </div>
         </div>
       </footer>
     </>
