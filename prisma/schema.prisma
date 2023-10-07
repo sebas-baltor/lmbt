@@ -20,4 +20,5 @@ model Match {
   teamB String
   category String 
   winner String?
+  textDate String
 }

@@ -10,6 +10,7 @@ CREATE TABLE [dbo].[Match] (
     [teamB] NVARCHAR(1000) NOT NULL,
     [category] NVARCHAR(1000) NOT NULL,
     [winner] NVARCHAR(1000),
+    [textDate] NVARCHAR(1000) NOT NULL,
     CONSTRAINT [Match_pkey] PRIMARY KEY CLUSTERED ([id])
 );
 

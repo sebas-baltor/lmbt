@@ -32,7 +32,7 @@ export default function Home() {
                     <span className="text-slate-400">{match.category}</span>
                     <br />
                     <span className="font-bold text-xl text-blue-900">
-                      {new Date(match.date).toTimeString()}
+                      {match.textDate}
                       {/* {`${match.date.getHours()}:${match.date.getMinutes()} ${match.date.getTime()}`} */}
                     </span>
                   </div>

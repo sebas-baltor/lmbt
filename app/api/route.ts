@@ -26,6 +26,7 @@ export async function POST(req: Request) {
         teamB: teamB,
         category: category,
         winner: winner,
+        textDate: time
       },
     });
     // console.log(createdMatch.date)
