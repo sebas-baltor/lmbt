@@ -74,7 +74,7 @@ export default function Home() {
       </main>
       <footer className="bg-blue-950 text-white py-4">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 items-center">
             <div className="flex gap-3 items-center justify-center">
               <a href="https://www.facebook.com/LMBTemas" target="_blank">
                 <Image
@@ -101,6 +101,13 @@ export default function Home() {
               &copy; Torneo de Basquetbol Patronal 2023 & Liga Municipal De
               Basquetbol de Temascalapa | Agradecimientos a IMCUFIDET y COPACI
             </p>
+              <a
+                href="https://maps.app.goo.gl/fVo5wYHzZHKDd9VV6"
+                target="_blank"
+                className="text-cyan-400 border-b border-cyan-400"
+              >
+                Ubicación
+              </a>
           </div>
         </div>
       </footer>
